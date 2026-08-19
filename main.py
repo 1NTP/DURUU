@@ -6,6 +6,8 @@ from api.stations import stations_api
 app = Flask(__name__)
 CORS(app)
 
+app.json.ensure_ascii = False
+
 app.register_blueprint(stations_api)
 
 if __name__ == "__main__":
